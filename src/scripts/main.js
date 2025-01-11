@@ -15,8 +15,8 @@ document.addEventListener('click', (e) => {
   let topCoord =
     e.clientY - wallRect.top - wall.clientTop - spider.offsetHeight / 2;
 
-  const maxLeftCoord = wall.clientWidth - spider.clientWidth;
-  const maxTopCoord = wall.clientHeight - spider.clientHeight;
+  const maxLeftCoord = wall.clientWidth - spider.offsetWidth;
+  const maxTopCoord = wall.clientHeight - spider.offsetHeight;
 
   leftCoord = Math.max(0, Math.min(leftCoord, maxLeftCoord));
   topCoord = Math.max(0, Math.min(topCoord, maxTopCoord));
